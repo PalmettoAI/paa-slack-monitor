@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body { background: theme(colors.paper); color: theme(colors.ink); }
+* { box-sizing: border-box; }
+
+.btn { @apply inline-flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium border border-ink/15 bg-white hover:bg-ink/5 transition; }
+.btn-primary { @apply inline-flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium border border-accent bg-accent text-white transition; }
+.btn-primary:hover { @apply bg-accentHover; }
+.btn-danger { @apply inline-flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium border border-danger/40 bg-white text-danger transition; }
+.btn-danger:hover { @apply bg-danger/5; }
+.chip { @apply inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-xs font-medium border; }
+.chip-ok { @apply chip border-accent/30 bg-accent/10 text-accent; }
+.chip-warn { @apply chip border-warn/30 bg-warn/10 text-warn; }
+.chip-bad { @apply chip border-danger/30 bg-danger/10 text-danger; }
+.chip-muted { @apply chip border-ink/15 bg-ink/5 text-muted; }
+.input { @apply w-full rounded-md border border-ink/15 bg-white px-3 py-2 text-sm placeholder:text-muted focus:outline-none focus:ring-2 focus:ring-accent/30; }
+.label { @apply text-xs font-medium text-muted uppercase tracking-wide; }
+.card { @apply rounded-lg border border-ink/10 bg-white p-5 shadow-sm; }
+.textarea { @apply w-full rounded-md border border-ink/15 bg-white px-3 py-2 text-sm placeholder:text-muted focus:outline-none focus:ring-2 focus:ring-accent/30 font-mono; }
